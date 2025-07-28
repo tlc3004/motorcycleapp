@@ -30,21 +30,18 @@
   align-items: start;
 }
 
-button {
-  background-color: #111;
-  color: white;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  border: 2px solid #b46868;
-  border-radius: 8px;
+.cerrar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
+  background: none;
+  border: none;
+  color: #f00;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: all 0.5s ease;
 }
 
-button:hover {
-  background-color: #4e627c;
-  transform: scale(1.05);
-}
+
 
 
 @media (max-width: 768px) {
@@ -53,7 +50,8 @@ button:hover {
     height: 40%;
     gap: 1rem;
     align-items: center;
-    margin-bottom: 600px;
+    margin-bottom: 
+    400px;
   }
 }
 

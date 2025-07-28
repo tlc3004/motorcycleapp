@@ -15,7 +15,7 @@ export default function Modal({ visible, onClose, contenido, imagenes = [], lado
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className={`modal-content modal-${lado}`} onClick={(e) => e.stopPropagation()}>
-        <button className="cerrar" onClick={onClose}>CERRAR</button>
+        <button className="cerrar" onClick={onClose}></button>
 
         <div className="contenido">
           {contenido}

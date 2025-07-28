@@ -148,9 +148,24 @@
 
 
   .cerrar{
-  position: absolute;
-  top: 0.5rem;
-  right: 0.7rem;
+  position:absolute;
+  top: 0.10rem;
+ left: 30%;
+  background: none;
+  border: none;
+  color: #f00;
+  font-size: 1.1rem;
+  cursor: pointer;
+  }
+}
+
+
+@media (max-width: 420px){
+  .cerrar{
+  position:absolute;
+  width: 12px;
+  top: 0.10rem;
+ left: 30%;
   background: none;
   border: none;
   color: #f00;
