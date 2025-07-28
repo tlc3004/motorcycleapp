@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "nombre": "carretera",
+    "archivo": "/images/carretera.png"
+  },
+  {
+    "id": 2,
+    "nombre": "carretera1",
+    "archivo": "/images/carretera1.png"
+  },
+  {
+    "id": 3,
+    "nombre": "carretera2",
+    "archivo": "/images/carretera2.png"
+  },
+  {
+    "id": 4,
+    "nombre": "carreterasbg",
+    "archivo": "/images/carreterasbg.png"
+  },
+  {
+    "id": 5,
+    "nombre": "moto",
+    "archivo": "/images/moto.png"
+  },
+  {
+    "id": 6,
+    "nombre": "motobg",
+    "archivo": "/images/motobg.png"
+  },
+  {
+    "id": 7,
+    "nombre": "motobg1",
+    "archivo": "/images/motobg1.png"
+  },
+  {
+    "id": 9,
+    "nombre": "motobg2",
+    "archivo": "/images/motobg2.png"
+  },
+  {
+    "id": 10,
+    "nombre": "motosbg",
+    "archivo": "/images/motosbg.png"
+  },
+  {
+    "id": 11,
+    "nombre": "motosbg1",
+    "archivo": "/images/motosbg1.png"
+  },
+  {
+    "id": 12,
+    "nombre": "motosbg2",
+    "archivo": "/images/motosbg2.png"
+  },
+  {
+    "id": 13,
+    "nombre": "motosbg3",
+    "archivo": "/images/motosbg3.png"
+  },
+  {
+    "id": 14,
+    "nombre": "rueda",
+    "archivo": "/images/rueda.png"
+  },
+  {
+    "id": 15,
+    "nombre": "timonbg",
+    "archivo": "/images/timonbg.png"
+  },
+  {
+    "id": 16,
+    "nombre": "timonbg1",
+    "archivo": "/images/timonbg1.png"
+  }
+]

@@ -1,0 +1,160 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.modal-content {
+  overflow: hidden;
+  background-color: #fff9;
+  padding: 2rem;
+  border-radius: 12px;
+  position: relative;
+  color: rgb(29, 25, 25);
+  width: 800px;
+  height: 500px;
+  text-align: center;
+  box-shadow: 0 0 20px #000;
+  
+}
+
+.contenido-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Espacio entre imágenes */
+  padding: 1rem;
+  max-height: 400px;
+  overflow-y: auto ;
+  scrollbar-width: none;
+}
+
+.contenido-imagenes::-webkit-scrollbar{
+  display: none;
+}
+
+.imagen-modal {
+  width: 500px;
+  height: 100%;
+  object-fit: cover; /* Mantiene proporciones sin deformar */
+  margin-top: 10%;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease;
+}
+
+.imagen-modal:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
+
+.modal-right {
+    animation: modalDerecha 3s ease;
+}
+
+@keyframes modalDerecha {
+  from {
+    transform: translateX(100%) ;
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%) ;
+    opacity: 1;
+  }
+}
+
+.modal-left {
+    animation: modalIzquierda 3s ease;
+}
+
+@keyframes modalIzquierda {
+  from {
+    transform: translateX(-100%) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+  }
+}
+
+.cerrar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
+  background: none;
+  border: none;
+  color: #f00;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+
+.rueda {
+  position: absolute;
+  bottom: -10px; /* debajo del modal */
+  left: 5%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: auto;
+  animation: girar 1s linear infinite;
+  z-index: 1001;
+}
+.rueda1 {
+  position: absolute;
+  bottom: -10px; /* debajo del modal */
+  left: 95%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: auto;
+  animation: girar 1s linear infinite;
+  z-index: 1001;
+}
+
+/* Animación de giro */
+@keyframes girar {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    height: 50%;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .rueda,
+  .rueda1 {
+    width: 40px;
+    bottom: -5px;
+  }
+
+
+  .cerrar{
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
+  background: none;
+  border: none;
+  color: #f00;
+  font-size: 1.1rem;
+  cursor: pointer;
+  }
+}

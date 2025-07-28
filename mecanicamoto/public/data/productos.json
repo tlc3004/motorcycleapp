@@ -1,0 +1,38 @@
+{
+  "cascos": [
+    "/images/cascos/casco.png",
+    "/images/cascos/casco1.png",
+    "/images/cascos/casco2.png",
+    "/images/cascos/casco3.png",
+    "/images/cascos/casco4.png",
+    "/images/cascos/casco5.png",
+    "/images/cascos/casco6.png",
+    "/images/cascos/casco7.png",
+    "/images/cascos/casco8.png"
+  ],
+  "guantes": [
+    "/images/guantes/guantes.png",
+    "/images/guantes/guantes1.png",
+    "/images/guantes/guantes2.png",
+    "/images/guantes/guantes3.png",
+    "/images/guantes/guantes4.png"
+  ],
+  "modelos": [
+    "/images/modelos/modelo.png",
+    "/images/modelos/modelo1.png",
+    "/images/modelos/modelo2.png",
+    "/images/modelos/modelo3.png",
+    "/images/modelos/modelo5.png",
+    "/images/modelos/modelo6.png",
+    "/images/modelos/modelo7.png",
+    "/images/modelos/modelo8.png",
+    "/images/modelos/motobg4.png"
+  ],
+  "trajes": [
+    "/images/trajes/traje.png",
+    "/images/trajes/traje1.png",
+    "/images/trajes/traje2.png",
+    "/images/trajes/traje3.png",
+    "/images/trajes/traje4.png"
+  ]
+}

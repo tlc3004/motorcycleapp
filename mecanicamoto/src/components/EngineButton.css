@@ -1,0 +1,18 @@
+.engine-button {
+  background-color: #065f46;
+  color: white;
+  border: 2px solid black;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+@media (max-width: 768px) {
+  .engine-button {
+    font-size: 1rem;
+    padding: 0.1rem .5rem;
+  }
+}

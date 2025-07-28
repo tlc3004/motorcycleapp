@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "MotoEngine1",
+    "sonido": "/sounds/motorcycle-engine.mp3"
+  },
+  {
+    "nombre": "MotoEngine2",
+    "sonido": "/sounds/motorcycle-engine-2.mp3"
+  },
+  {
+    "nombre": "MotoEngine3",
+    "sonido": "/sounds/motorcycle-starting-sound.mp3"
+  },
+  {
+    "nombre": "MotoEngine4",
+    "sonido": "/sounds/motorcycle2.mp3"
+  },
+  {
+    "nombre": "MotoEngine5",
+    "sonido": "/sounds/sfx-motorcycle-doppler.mp3"
+  }
+]

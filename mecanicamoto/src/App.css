@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.app {
+  width: 100vw;
+  height: 100dvh; /* ✅ Usa viewport dinámico para móviles también */
+  background-image: url('/images/carreterasbg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* ✅ Oculta scroll por completo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+
+.opciones {
+  z-index: 1;
+  display: flex;
+  gap: 5rem;
+  margin-bottom: 500px;
+  flex-direction: row;
+  align-items: start;
+}
+
+button {
+  background-color: #111;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: 2px solid #b46868;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  background-color: #4e627c;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .opciones {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 600px;
+  }
+}
+
+
