@@ -31,7 +31,7 @@ export default function Modal({ visible, onClose, contenido, imagenes = [], lado
                 key={index}
                 src={src}
                 alt={`modal-img-${index}`}
-                className="imagen-modal"style={{backgroundSize:"40%"}}
+                className="imagen-modal"style={{backgroundSize:"45%"}}
               />
             ))}
           </div>
