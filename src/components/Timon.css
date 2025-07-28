@@ -1,29 +1,33 @@
 .timon-container {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    height:100%;
-    z-index: 1;
-    pointer-events: none;
-    overflow-y: hidden;
-    filter: blur(opacity);
+  position: absolute;
+  top: 150%; /* Empieza fuera de pantalla */
+  left: 50%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow-y: hidden;
+  filter: blur(opacity);
+  transition: top 5s ease-in;
 }
 
-.timon-img{
-    width: 450px;
-    height: 400px;
-
+.timon-img {
+  width: 450px;
+  height: 400px;
 }
 
-@keyframes rotate{
-    0%{
-        transform: rotate(-5deg);
-    }
-    100%{
-        transform: rotate(5deg);
-    }
+@keyframes rotate {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
 }
 
+/* Clase que se activa con el estado para deslizar hacia arriba */
+.timon-entrar {
+  top: 90%;
+}
 
 @media (max-width: 768px) {
   .timon-img {
@@ -32,6 +36,10 @@
   }
 
   .timon-container {
+    top: 150%;
+  }
+
+  .timon-container.timon-entrar {
     top: 120%;
   }
 }
