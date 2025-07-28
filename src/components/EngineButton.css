@@ -7,7 +7,7 @@
   border-radius: 0.6rem;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: background-color 0.4s;
 }
 
 @media (max-width: 768px) {
