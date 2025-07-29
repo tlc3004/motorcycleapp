@@ -1,5 +1,5 @@
 .engine-button {
-  background-color: #065f46;
+  background-color: #046;
   color: white;
   border: 2px solid black;
   padding: 1rem 2rem;
@@ -8,6 +8,11 @@
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.4s;
+}
+
+.engine-button:hover{
+  transition: background-color 0.5;
+  color: chocolate;
 }
 
 @media (max-width: 768px) {
