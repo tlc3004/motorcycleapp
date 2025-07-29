@@ -29,7 +29,7 @@ const opciones = [
     sonido: "/sounds/motorcycle-engine.mp3"
   },
   {
-    nombre: "/images/casco.png",
+    nombre: "",
     angulo: -20,
     lado: "left",
     tipo: "cascos",
