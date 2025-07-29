@@ -6,7 +6,7 @@ export default function EngineButton({ onClick, children, sonido, delay = 1800 }
   const [isPressed, setIsPressed] = useState(false);
 
   const styles = useSpring({
-    transform: isPressed ? 'scale(0.95) translateY(1px)' : 'scale(1) translateY(0)',
+    transform: isPressed ? 'scale(0.75) translateY(1px)' : 'scale(1) translateY(0)',
     config: { tension: 200, friction: 10 },
   });
 
