@@ -26,6 +26,8 @@
 }
 
 .contenido-imagenes {
+  position: absolute;
+  align-items: start;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -44,7 +46,8 @@
   width: 500px;
   height: 100%;
   object-fit: cover; /* Mantiene proporciones sin deformar */
-  margin-top: 10%;
+  margin-bottom: 30%;
+  cursor: pointer;
 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);

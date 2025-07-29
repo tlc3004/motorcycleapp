@@ -20,12 +20,33 @@
   flex-direction: column;
 }
 
+h1{
+  border-radius: 30% #0005;
+  font-size: 80px;
+  margin:  15px;
+  color: steelblue;
+  animation: pasar 10s infinite ease-in-out;
+}
+
+@keyframes pasar{
+  0%{
+    transform: translateX(200%);
+    background: linear-gradient(#f00, #55a);
+    
+    opacity: .8;
+  }
+  100%{
+    transform: translateX(-200%);
+    background: linear-gradient(#fe09, #c3e);
+    opacity: .8;
+  }
+}
 
 .opciones {
   z-index: 1;
   display: flex;
-  gap: 10rem;
-  margin-bottom: 400px;
+  gap: 15rem;
+  margin-bottom: 350px;
   flex-direction: row;
   align-items: start;
 }
@@ -64,7 +85,7 @@
   width: 50px;
   height: 30px;
   object-fit: contain;
-  margin-bottom: 2px;
+  margin: 2px;
 }
 
 .logo-etiqueta {
@@ -80,7 +101,7 @@
 @media (max-width: 768px) {
   .opciones {
     flex-direction: row;
-    height: 40%;
+    height: 30%;
     gap: 1rem;
     align-items: center;
     margin-bottom: 
@@ -98,14 +119,14 @@
     flex-direction: row;   /* uno encima del otro */
     align-items: center;
     gap: 1rem;
-    margin-bottom: 350px;     /* menos espacio en móviles chicos */
+    margin-bottom: 150px;     /* menos espacio en móviles chicos */
   }
 
   button {
     font-size: 1rem;
-    top: 300px;
+    top: 200px;
     padding: 0.75rem 1.5rem;
-    width: 100%;              /* que ocupen todo el ancho disponible */
-    max-width: 280px;         /* pero no exagerado */
+    width: 80%;              /* que ocupen todo el ancho disponible */
+    max-width: 200px;         /* pero no exagerado */
   }
 }

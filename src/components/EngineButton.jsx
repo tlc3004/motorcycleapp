@@ -7,13 +7,13 @@ export default function EngineButton({ onClick, children, sonido, delay = 1800 }
 
   const styles = useSpring({
     transform: isPressed ? 'scale(0.95) translateY(1px)' : 'scale(1) translateY(0)',
-    config: { tension: 250, friction: 20 },
+    config: { tension: 200, friction: 10 },
   });
 
   const handleClick = () => {
     if (sonido) {
       const audio = new Audio(sonido);
-      audio.volume = 0.5;
+      audio.volume = .9;
       audio.play().catch(err => console.error("Error al reproducir sonido:", err));
     }
 

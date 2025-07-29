@@ -5,7 +5,7 @@ export default function Modal({ visible, onClose, contenido, imagenes = [], lado
   useEffect(() => {
     if (visible && sonido) {
       const audio = new Audio(sonido);
-      audio.volume = 0.5;
+      audio.volume = 0.9;
       audio.play().catch((err) => console.error("No se pudo reproducir el sonido del modal:", err));
     }
   }, [visible, sonido]);
@@ -19,11 +19,11 @@ export default function Modal({ visible, onClose, contenido, imagenes = [], lado
 
         <div className="contenido">
         <h2>{contenido}</h2> 
-          <div className="precio-modal">Precio: S/ {precio}</div>
+          <div className="precio-modal">Precio: S/ {precio}.00</div>
 
           {/* Ruedas decorativas */}
-          <img src="/images/rueda.png" alt="rueda" className="rueda" />
-          <img src="/images/rueda.png" alt="rueda" className="rueda1" />
+          {/* <img src="/images/rueda.png" alt="rueda" className="rueda" />
+          <img src="/images/rueda.png" alt="rueda" className="rueda1" /> */}
 
           {/* Imágenes dinámicas */}
           <div className="contenido-imagenes">

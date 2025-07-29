@@ -12,7 +12,7 @@ function App() {
   const[ precio,setPrecio]=useState("")
 
   const[productos, setProductos]=useState({cascos: [], modelos:[], guantes:[], trajes:[]});
-  const[ setLogos]=useState([]);
+
   const [imagenesModal, setImagenesModal] = useState([]);
 
 
@@ -22,16 +22,11 @@ function App() {
     .then((data) => setProductos(data))
   },[])
 
-  useEffect(() =>{
-    fetch("/data/logos.json")
-    .then((res) => res.json())
-    .then((data) => setLogos(data))
-  },[])
 
 const opciones = [
   {
     nombre: "/logos/modelo.png",
-    precio: 300,
+    precio: "",
     angulo: -30,
     lado: "left",
     tipo: "modelos",
@@ -39,7 +34,7 @@ const opciones = [
   },
   {
     nombre: "/logos/casco.png",
-    
+    precio: "",
     angulo: -20,
     lado: "left",
     tipo: "cascos",
@@ -47,7 +42,7 @@ const opciones = [
   },
   {
     nombre: "/logos/guantes.png",
-    precio: 300,
+    precio: "",
     angulo: 20,
     lado: "right",
     tipo: "guantes",
@@ -55,7 +50,7 @@ const opciones = [
   },
   {
     nombre: "/logos/traje.png",
-    precio: 300,
+    precio: "",
     angulo: 30,
     lado: "right",
     tipo: "trajes",
@@ -66,6 +61,7 @@ const opciones = [
 
 const handleClick = (opcion) => {
   setRotacion(opcion.angulo);
+
   setContenidoModal(opcion.tipo);
   setPrecio(productos[`precio_${opcion.tipo}`] || 0)
   setLadoModal(opcion.lado || "right");
@@ -73,12 +69,13 @@ const handleClick = (opcion) => {
   // Aquí sí funciona
   setMostrarModal(true);
 
-  setTimeout(() => setRotacion(0), 5000);
+  setTimeout(() => setRotacion(0), 3000);
 };
 
 
   return (
     <div className="app">
+      <h1>MOTOR SHOW</h1>
       <Timon rotacion={rotacion} />
       <div className="opciones">
   {opciones.map((opcion, i) => (
