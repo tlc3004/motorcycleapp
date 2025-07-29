@@ -1,4 +1,6 @@
 {
+  "marca": "",
+  "precio": 300,
   "cascos": [
     "/images/cascos/casco.png",
     "/images/cascos/casco1.png",

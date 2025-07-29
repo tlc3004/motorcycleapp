@@ -9,8 +9,10 @@ function App() {
   const [mostrarModal, setMostrarModal] = useState(false);
   const [contenidoModal, setContenidoModal] = useState("");
   const[ladoModal, setLadoModal] = useState("right");
+  const[ setPrecio]=useState("")
 
   const[productos, setProductos]=useState({cascos: [], modelos:[], guantes:[], trajes:[]});
+  const[ setLogos]=useState([]);
   const [imagenesModal, setImagenesModal] = useState([]);
 
 
@@ -20,30 +22,40 @@ function App() {
     .then((data) => setProductos(data))
   },[])
 
+  useEffect(() =>{
+    fetch("/data/logos.json")
+    .then((res) => res.json())
+    .then((data) => setLogos(data))
+  },[])
+
 const opciones = [
   {
-    nombre: "🏍 Modelos",
+    nombre: "/logos/modelo.png",
+    precio: 300,
     angulo: -30,
     lado: "left",
     tipo: "modelos",
     sonido: "/sounds/motorcycle-engine.mp3"
   },
   {
-    nombre: "",
+    nombre: "/logos/casco.png",
+    precio: 300,
     angulo: -20,
     lado: "left",
     tipo: "cascos",
     sonido: "/sounds/motorcycle-engine-2.mp3"
   },
   {
-    nombre: "🧤 Guantes",
+    nombre: "/logos/guantes.png",
+    precio: 300,
     angulo: 20,
     lado: "right",
     tipo: "guantes",
     sonido: "/sounds/motorcycle-engine-2.mp3"
   },
   {
-    nombre: "🧥 Trajes",
+    nombre: "/logos/traje.png",
+    precio: 300,
     angulo: 30,
     lado: "right",
     tipo: "trajes",
@@ -54,9 +66,11 @@ const opciones = [
 
 const handleClick = (opcion) => {
   setRotacion(opcion.angulo);
-  setContenidoModal(opcion.nombre);
+  setContenidoModal(opcion.tipo);
+  setPrecio(opcion.precio)
   setLadoModal(opcion.lado || "right");
-  setImagenesModal(productos[opcion.tipo] || []); // Aquí sí funciona
+  setImagenesModal(productos[opcion.tipo] || []); 
+  // Aquí sí funciona
   setMostrarModal(true);
 
   setTimeout(() => setRotacion(0), 5000);
@@ -67,21 +81,33 @@ const handleClick = (opcion) => {
     <div className="app">
       <Timon rotacion={rotacion} />
       <div className="opciones">
-        {opciones.map((opcion, i) => (
-          <EngineButton 
-          key={i}
-          sonido={opcion.sonido} 
-          onClick={() => handleClick(opcion)}>
-            {opcion.nombre}
-          </EngineButton>
-        ))}
+  {opciones.map((opcion, i) => (
+    <EngineButton 
+      key={i}
+      sonido={opcion.sonido} 
+      onClick={() => handleClick(opcion)}
+    >
+      <div className="logos">
+        <img 
+          src={opcion.nombre} 
+          alt={opcion.tipo} 
+          className="logo-icono" 
+        />
+        <span className="nombre-logo">
+          {opcion.tipo}
+        </span>
       </div>
+    </EngineButton>
+  ))}
+</div>
+
 
   <Modal
   visible={mostrarModal}
   onClose={() => setMostrarModal(false)}
   imagenes={imagenesModal}
   contenido={<h2>{contenidoModal}</h2>}
+  precio={<h3>{opciones.precio}</h3>}
   lado={ladoModal}
   sonido="/sounds/sfx-motorcycle-doppler.mp3"
 />

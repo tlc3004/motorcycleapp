@@ -1,7 +1,22 @@
 [
      {
-    "id": 17,
+    "id": 1,
     "nombre": "casco",
-    "archivo": "images/casco.png"
+    "archivo": "/logos/casco.png"
+  },
+  {
+    "id": 2,
+    "nombre": "guantes",
+    "archivo": "logos/guantes.png"
+  },
+  {
+    "id": 3,
+    "nombre": "modelo",
+    "archivo": "logos/modelo.png"
+  },
+  {
+    "id": 4,
+    "nombre": "traje",
+    "archivo": "logos/traje.png"
   }
 ]
