@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import './Modal.css';
 
-export default function Modal({ visible, onClose, contenido, imagenes = [], lado = "right", sonido }) {
+export default function Modal({ visible, onClose, contenido, imagenes = [], lado = "right", sonido, precio }) {
   useEffect(() => {
     if (visible && sonido) {
       const audio = new Audio(sonido);
@@ -18,7 +18,8 @@ export default function Modal({ visible, onClose, contenido, imagenes = [], lado
         <button className="cerrar" onClick={onClose}></button>
 
         <div className="contenido">
-          {contenido}
+        <h2>{contenido}</h2> 
+          <div className="precio-modal">Precio: S/ {precio}</div>
 
           {/* Ruedas decorativas */}
           <img src="/images/rueda.png" alt="rueda" className="rueda" />

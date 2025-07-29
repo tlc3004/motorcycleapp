@@ -1,6 +1,5 @@
 {
-  "marca": "",
-  "precio": 300,
+  "precio_cascos": 250,
   "cascos": [
     "/images/cascos/casco.png",
     "/images/cascos/casco1.png",
@@ -12,6 +11,7 @@
     "/images/cascos/casco7.png",
     "/images/cascos/casco8.png"
   ],
+  "precio_guantes": 100,
   "guantes": [
     "/images/guantes/guantes.png",
     "/images/guantes/guantes1.png",
@@ -19,6 +19,7 @@
     "/images/guantes/guantes3.png",
     "/images/guantes/guantes4.png"
   ],
+  "precio_modelos": 500,
   "modelos": [
     "/images/modelos/modelo.png",
     "/images/modelos/modelo1.png",
@@ -30,6 +31,7 @@
     "/images/modelos/modelo8.png",
     "/images/modelos/motobg4.png"
   ],
+  "precio_trajes": 350,
   "trajes": [
     "/images/trajes/traje.png",
     "/images/trajes/traje1.png",

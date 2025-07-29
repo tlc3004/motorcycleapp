@@ -9,7 +9,7 @@ function App() {
   const [mostrarModal, setMostrarModal] = useState(false);
   const [contenidoModal, setContenidoModal] = useState("");
   const[ladoModal, setLadoModal] = useState("right");
-  const[ setPrecio]=useState("")
+  const[ precio,setPrecio]=useState("")
 
   const[productos, setProductos]=useState({cascos: [], modelos:[], guantes:[], trajes:[]});
   const[ setLogos]=useState([]);
@@ -39,7 +39,7 @@ const opciones = [
   },
   {
     nombre: "/logos/casco.png",
-    precio: 300,
+    
     angulo: -20,
     lado: "left",
     tipo: "cascos",
@@ -67,7 +67,7 @@ const opciones = [
 const handleClick = (opcion) => {
   setRotacion(opcion.angulo);
   setContenidoModal(opcion.tipo);
-  setPrecio(opcion.precio)
+  setPrecio(productos[`precio_${opcion.tipo}`] || 0)
   setLadoModal(opcion.lado || "right");
   setImagenesModal(productos[opcion.tipo] || []); 
   // Aquí sí funciona
@@ -91,6 +91,7 @@ const handleClick = (opcion) => {
         <img 
           src={opcion.nombre} 
           alt={opcion.tipo} 
+          precio={precio}
           className="logo-icono" 
         />
         <span className="nombre-logo">
@@ -102,15 +103,16 @@ const handleClick = (opcion) => {
 </div>
 
 
-  <Modal
+ <Modal
   visible={mostrarModal}
   onClose={() => setMostrarModal(false)}
   imagenes={imagenesModal}
-  contenido={<h2>{contenidoModal}</h2>}
-  precio={<h3>{opciones.precio}</h3>}
+  contenido={contenidoModal}
+  precio={precio}  
   lado={ladoModal}
   sonido="/sounds/sfx-motorcycle-doppler.mp3"
 />
+
 
 
     </div>
