@@ -1,41 +1,45 @@
 .timon-container {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* 💡 Centrado total */
-  z-index: 1;
-  pointer-events: none;
-  overflow: hidden;
-  animation: aparecer 5s ease forwards;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    height:100%;
+    z-index: 1;
+    transform: translateX(-50%);
+    pointer-events: none;
+    overflow-y: hidden;
+    animation: aparecer 5s  ease;
 }
 
-.timon-img {
-  width: 450px;
-  height: 400px;
-  display: block;
-  margin: 0 auto; /* Por si acaso */
+.timon-img{
+    position: relative;
+    width: 450px;
+    height: 400px;
+    align-items: center;
+
 }
 
-/* Animación de entrada */
-@keyframes aparecer {
+
+ @keyframes aparecer {
   0% {
-    transform: translate(-50%, 200px); /* desde abajo y centrado */
+    transform: translate(-50%, 200px);
     opacity: 0;
   }
   100% {
-    transform: translate(-50%, -80%); /* sube y se queda centrado */
-    opacity: 1;
+    transform: translate(-50%, -50%);  
+   opacity: 1;
   }
 }
 
-/* 📱 Responsive */
+
+
 @media (max-width: 768px) {
   .timon-img {
-    width: 90vw;
-    height: auto;
+    width: 100%;
+    height: 35%;
+  
   }
 
   .timon-container {
-    top: 110%;
+    top: 120%;
   }
 }

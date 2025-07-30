@@ -74,7 +74,8 @@ const handleClick = (opcion) => {
 
 
   return (
-    <div className="app">
+    <div className="app" >
+
       <h1>MOTOR SHOW</h1>
       <Timon rotacion={rotacion} />
       <div className="opciones">

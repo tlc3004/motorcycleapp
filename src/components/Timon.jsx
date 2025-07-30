@@ -1,11 +1,19 @@
-import React from "react";
-import './Timon.css'
+import React, { useEffect } from "react";
+import './Timon.css';
 
+export default function Timon({ rotacion }) {
 
-
-
-export default function Timon({rotacion}){
-
+  useEffect(() => {
+    fetch("/data/sonidos.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const audio = new Audio(
+          data.find(s => s.sonido.includes("motorcycle-engine-2.mp3")).sonido
+        );
+        audio.play();
+      });
+  }, []);
+  
     return(
         <div className="timon-container"
         style={{
