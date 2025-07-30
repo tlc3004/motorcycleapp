@@ -7,7 +7,7 @@
     transform: translateX(-50%);
     pointer-events: none;
     overflow-y: hidden;
-    animation: aparecer 5s  ease;
+    animation: aparecer 2s  ease;
 }
 
 .timon-img{

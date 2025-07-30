@@ -8,18 +8,20 @@ export default function Timon({ rotacion }) {
       .then((res) => res.json())
       .then((data) => {
         const audio = new Audio(
-          data.find(s => s.sonido.includes("motorcycle-engine-2.mp3")).sonido
+          data.find(s => s.sonido.includes("motorcycle-starting-sound.mp3")).sonido
         );
         audio.play();
       });
   }, []);
-  
+
     return(
         <div className="timon-container"
         style={{
             transform:`translate(-50%, -50%) rotate(${rotacion}deg)`,
             transition: "transform .9s ease"
+        
         }}
+        sonido="motorcycle-starting-sound.mp3"
         >
             <img src="/images/motosbg2.png" alt="timon de moto" className="timon-img"/>
         </div>
