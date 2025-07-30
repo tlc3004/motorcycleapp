@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Modal from "./components/Modal";
 import Timon from "./components/Timon";
 import EngineButton from "./components/EngineButton";
+import PodioIntro from "./components/PodioIntro";
 import "./App.css";
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
   const[productos, setProductos]=useState({cascos: [], modelos:[], guantes:[], trajes:[]});
 
   const [imagenesModal, setImagenesModal] = useState([]);
+
+  const[started, setStarted]=useState(false)
 
 
   useEffect(() =>{
@@ -74,8 +77,15 @@ const handleClick = (opcion) => {
 
 
   return (
-    <div className="app" >
+    <>
+{!started && (
+  <PodioIntro
+    onStart={() => setStarted(true)}
+    sonido="/sonidos/motorcycle-starting-sound.mp3"
+  />
+)}
 
+    <div className="app" >
       <h1>MOTOR SHOW</h1>
       <Timon rotacion={rotacion} />
       <div className="opciones">
@@ -114,6 +124,7 @@ const handleClick = (opcion) => {
 
 
     </div>
+    </>
   );
 }
 
