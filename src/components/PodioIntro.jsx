@@ -16,7 +16,7 @@ const handleStart = () => {
     <div className="podio-overlay">
       <div >
         <h1> Bienvenido al Podio 🏁GP🏍️ </h1>
-        <button onClick={handleStart}>Entrar</button>
+        <button className="btn" onClick={handleStart}>Entrar</button>
         <audio ref={audio} src={sonido} preload="auto"/>
       </div>
     </div>

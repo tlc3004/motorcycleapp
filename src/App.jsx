@@ -81,7 +81,7 @@ const handleClick = (opcion) => {
 {!started && (
   <PodioIntro
     onStart={() => setStarted(true)}
-    sonido="/sonidos/motorcycle-starting-sound.mp3"
+    sonido="/sounds/motorcycle-starting-sound.mp3"
   />
 )}
 

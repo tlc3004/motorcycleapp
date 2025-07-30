@@ -1,6 +1,6 @@
 .timon-container {
     position: absolute;
-    top: 10%;
+    top: 90%;
     left: 50%;
     height:100%;
     z-index: 1;
@@ -44,26 +44,3 @@
   }
 }
 
-@media (min-width: 420px) {
-  .timon-img {
-    width: 90%;
-    height: 50%;
-    left: 5%;
-  
-  }
-
-  .timon-container {
-    top: 100%;
-  }
-
- @keyframes aparecer {
-  0% {
-    transform: translate(-50%, 200px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(-50%, -50%);  
-   opacity: 1;
-  }
-}
-}
