@@ -28,19 +28,6 @@ h1{
   animation: pasar 10s infinite ease-in-out;
 }
 
-@keyframes pasar{
-  0%{
-    transform: translateX(200%);
-    background: linear-gradient(#f00, #55a);
-    
-    opacity: .8;
-  }
-  100%{
-    transform: translateX(-200%);
-    background: linear-gradient(#fe09, #c3e);
-    opacity: .8;
-  }
-}
 
 .opciones {
   z-index: 1;

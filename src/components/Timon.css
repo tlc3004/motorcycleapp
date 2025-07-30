@@ -4,24 +4,27 @@
     left: 50%;
     height:100%;
     z-index: 1;
+    transform: translateX(50%);
     pointer-events: none;
     overflow-y: hidden;
-    filter: blur(opacity);
+    animation: aparecer 5s  ease;
 }
 
 .timon-img{
+    position: relative;
     width: 450px;
     height: 400px;
+    align-items: center;
 
 }
 
-@keyframes rotate{
-    0%{
-        transform: rotate(-5deg);
-    }
-    100%{
-        transform: rotate(5deg);
-    }
+@keyframes aparecer{
+  to{
+    transform: translateY(-300px);
+  }
+  from{
+    transform: translateY(200px);
+  }
 }
 
 
