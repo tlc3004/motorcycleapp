@@ -1,8 +1,8 @@
 .timon-container {
     position: absolute;
-    top: 90%;
+    top: 85%;
     left: 50%;
-    height:100%;
+    height:80%;
     z-index: 1;
     transform: translateX(-50%);
     pointer-events: none;
@@ -12,7 +12,7 @@
 
 .timon-img{
     position: relative;
-    width: 450px;
+    width: 500px;
     height: 400px;
     align-items: center;
 
@@ -41,5 +41,28 @@
 
   .timon-container {
     top: 120%;
+  }
+}
+
+@media (max-width: 420px) {
+  .timon-img {
+    width: 90%;
+    height: 50%;
+    left: 5%;
+  
+  }
+
+  .timon-container {
+    top: 100%;
+  }
+}
+ @keyframes aparecer {
+  0% {
+    transform: translate(-50%, 200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);  
+   opacity: 1;
   }
 }
