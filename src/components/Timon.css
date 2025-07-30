@@ -17,7 +17,7 @@
     align-items: center;
 
 }
-
+/* 
 @keyframes aparecer{
   to{
     transform: translateY(-300px);
@@ -25,7 +25,7 @@
   from{
     transform: translateY(200px);
   }
-}
+} */
 
 
 @media (max-width: 768px) {
