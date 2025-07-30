@@ -116,16 +116,14 @@ h1{
   }
 
 
-@media (max-width: 420px) {
+@media (max-width: 350px) {
   .app {
     padding: 1rem; /* por si algún contenido se ajusta al borde */
   }
 
   h1{
-    font-size: 2rem;
-    display: flex;
-
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
   }
 
   .opciones {
