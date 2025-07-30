@@ -86,7 +86,7 @@ const handleClick = (opcion) => {
 )}
 
     <div className="app" >
-      <h1>MOTOR SHOW</h1>
+      <h1>MOTO´S SHOW</h1>
       <Timon rotacion={rotacion} />
       <div className="opciones">
   {opciones.map((opcion, i) => (
