@@ -1,19 +1,18 @@
 .timon-container {
     position: absolute;
-    top: 90%;
+    top: 95%;
     left: 50%;
     height:100%;
     z-index: 1;
-  
     pointer-events: none;
     overflow-y: hidden;
-    animation: aparecer 2s  ease;
+    animation: aparecer 5s  ease;
 }
 
 .timon-img{
     position: relative;
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 350px;
     align-items: center;
 
 }
@@ -30,17 +29,14 @@
   }
 }
 
-
-
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .timon-img {
-    width: 100%;
-    height: 35%;
-  
+    width: 250px !important;
+    height: 300px !important;
   }
-
   .timon-container {
-    top: 120%;
+    top: 120% !important;
   }
 }
+
 

@@ -76,6 +76,9 @@ const handleClick = (opcion) => {
 };
 
 
+
+
+
   return (
     <>
 {!started && (
@@ -85,8 +88,9 @@ const handleClick = (opcion) => {
   />
 )}
 
+
     <div className="app" >
-      <h1>MOTO´S SHOW</h1>
+      <h1 className="mt-20">MOTO´S SHOW</h1>
       <Timon rotacion={rotacion} />
       <div className="opciones">
   {opciones.map((opcion, i) => (
@@ -120,18 +124,30 @@ const handleClick = (opcion) => {
   lado={ladoModal}
   sonido="/sounds/sfx-motorcycle-doppler.mp3"
 />
-<a
-  href="https://app-myperu.vercel.app"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="enlace-externo"
->
-  🌐 Ir a APP MYPEru
-</a>
 
 
 
     </div>
+  <div className="absolute flex justify-between px-8 py-4 text-sm text-gray-600">
+  <a
+    href="https://app-myperu.vercel.app"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="left-5 underline hover:text-gray-800 transition duration-300 "
+  >
+    App-MYPErú.vercel.app
+  </a>
+
+  <a
+    href="https://tumaki.vercel.app"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="left-5 underline hover:text-gray-800 transition duration-300"
+  >
+   Tumaki.vercel.app
+  </a>
+</div>
+
     </>
   );
 }
