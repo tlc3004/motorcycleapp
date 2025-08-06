@@ -120,6 +120,14 @@ const handleClick = (opcion) => {
   lado={ladoModal}
   sonido="/sounds/sfx-motorcycle-doppler.mp3"
 />
+<a
+  href="https://app-myperu.vercel.app"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="enlace-externo"
+>
+  🌐 Ir a APP MYPEru
+</a>
 
 
 
