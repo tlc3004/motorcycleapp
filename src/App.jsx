@@ -131,17 +131,13 @@ const handleClick = (opcion) => {
   <div className="absolute flex justify-between px-8 py-4 text-sm text-gray-600">
   <a
     href="https://app-myperu.vercel.app"
-    target="_blank"
-    rel="noopener noreferrer"
     className="left-5 underline hover:text-gray-800 transition duration-300 "
   >
     App-MYPErú.vercel.app
   </a>
 
   <a
-    href="https://tumaki.vercel.app"
-    target="_blank"
-    rel="noopener noreferrer"
+    href="https://tumaki-web-Site.vercel.app"
     className="left-5 underline hover:text-gray-800 transition duration-300"
   >
    Tumaki.vercel.app
