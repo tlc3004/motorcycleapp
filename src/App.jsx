@@ -4,6 +4,7 @@ import Timon from "./components/Timon";
 import EngineButton from "./components/EngineButton";
 import PodioIntro from "./components/PodioIntro";
 import "./App.css";
+import { useAppData } from "./custom/useAppData";
 
 function App() {
   const [rotacion, setRotacion] = useState(0);
@@ -17,6 +18,8 @@ function App() {
   const [imagenesModal, setImagenesModal] = useState([]);
 
   const[started, setStarted]=useState(false)
+
+  const[apps, setApps]=useAppData()
 
 
   useEffect(() =>{
@@ -128,20 +131,19 @@ const handleClick = (opcion) => {
 
 
     </div>
-  <div className="absolute flex justify-between px-8 py-4 text-sm text-gray-600">
-  <a
-    href="https://app-myperu.vercel.app"
-    className="left-5 underline hover:text-gray-800 transition duration-300 "
-  >
-    App-MYPErú.vercel.app
-  </a>
-
-  <a
-    href="https://tumaki-web-Site.vercel.app"
-    className="left-5 underline hover:text-gray-800 transition duration-300"
-  >
-   Tumaki.vercel.app
-  </a>
+<div className="absolute bottom-2 left-0 right-0 flex justify-center gap-8 px-4 py-4 text-sm text-gray-600">
+  {apps.map((app, index) => (
+    <a
+      key={index}
+      href={app.ruta}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 underline hover:text-gray-800 transition duration-300"
+    >
+      <img src={app.logo} alt={app.nombre} className="w-6 h-6 object-contain" />
+      <span>{app.nombre}</span>
+    </a>
+  ))}
 </div>
 
     </>
