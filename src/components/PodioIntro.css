@@ -26,3 +26,20 @@
 .btn:hover {
   transform: scale(1.1);
 }
+
+
+@media (max-width: 600px) {
+  .btn {
+    width: 120px !important;
+    height: 70px !important;
+    text-align: center;
+  }
+  .btn {
+    top: 10% !important;
+  }
+
+  .podio-overlay{
+    align-items: center;
+    font-size: .1rem;
+  }
+}

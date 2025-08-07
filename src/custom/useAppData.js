@@ -1,22 +1,19 @@
 // src/hooks/useAppLinks.js
 import { useEffect, useState } from "react";
 
-export function useAppData(fuente = "/data/apps.json") {
-  const [apps, setApps] = useState([]);
+// ✅ asegúrate de retornar al menos un array vacío
+export function useAppData() {
+  const [apps, setApps] = useState([]); // <- esto ya lo tienes bien
 
   useEffect(() => {
-    async function cargar() {
-      try {
-        const res = await fetch(fuente);
-        const data = await res.json();
-        setApps(data);
-      } catch (error) {
-        console.error("❌ Error al cargar rutas de apps:", error);
-      }
-    }
+    fetch("/data/apps.json")
+      .then((res) => res.json())
+      .then((data) => setApps(data))
+      .catch((err) => {
+        console.error("Error cargando apps:", err);
+        setApps([]); // ← en caso de error, deja vacío
+      });
+  }, []);
 
-    cargar();
-  }, [fuente]);
-
-  return apps;
+  return [apps]; // ← NO retornes undefined
 }

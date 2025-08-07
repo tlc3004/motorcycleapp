@@ -1,6 +1,6 @@
 .timon-container {
     position: absolute;
-    top: 95%;
+    top: 90%;
     left: 50%;
     height:100%;
     z-index: 1;
@@ -11,8 +11,8 @@
 
 .timon-img{
     position: relative;
-    width: 400px;
-    height: 350px;
+    width: 500px;
+    height: 400px;
     align-items: center;
 
 }
@@ -31,11 +31,11 @@
 
 @media (max-width: 600px) {
   .timon-img {
-    width: 250px !important;
+    width: 400px !important;
     height: 300px !important;
   }
   .timon-container {
-    top: 120% !important;
+    top: 110% !important;
   }
 }
 
