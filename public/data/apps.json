@@ -1,10 +1,22 @@
 [
   {
     "nombre": "APP MYPEru",
+    "logo": "solutions.png",
     "url": "https://app-myperu.vercel.app"
   },
   {
-    "nombre": "tumaki",
+    "nombre": "Tumaki Web Site",
+    "logo ": "logo193.png",
     "url": "https://tumaki-web-site.vercel.app/"
+  },
+  {
+    "nombre": "Tumaki",
+    "logo ": "sushi.ico",
+    "url": "https://tumaki.vercel.app/"
+  },
+  {
+    "nombre": "Confiture 3d",
+    "logo ": "shoes.png",
+    "url": "https://tienda-3d-gold.vercel.app/"
   }
 ]
